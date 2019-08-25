@@ -1,3 +1,5 @@
+This project is developed in python version 3.6.8
+
 # How do I install this project?
 * Run following command to perform fresh dev environment setup.
 
@@ -60,15 +62,52 @@ python manage.py createsuperuser --username username --email username@email.com
 
 * Game a game by query parameters
     * Method: GET
-    * API endpoint: http://127.0.0.1:8000/api/games?title=LittleBigPlanet PS Vita
+    * API endpoint: http://127.0.0.1:8000/api/games?title=The Walking Dead: The Game -- Episode 3: Long Road Ahead
     * Response: {
-    "games": \[{
-            "title": "LittleBigPlanet PS Vita",
-            "platform": "PlayStation Vita",
-            "score": 9,
-            "genre": "Platformer",
+    "games": \[
+        {
+            "title": "The Walking Dead: The Game -- Episode 3: Long Road Ahead",
+            "platform": "Macintosh",
+            "score": 9.0,
+            "genre": "Adventure",
             "editors_choice": true,
-            "game_id": 2
+            "game_id": 30
+        },
+        {
+            "title": "The Walking Dead: The Game -- Episode 3: Long Road Ahead",
+            "platform": "Xbox 360",
+            "score": 9.0,
+            "genre": "Adventure",
+            "editors_choice": true,
+            "game_id": 37
+        },
+        {
+            "title": "The Walking Dead: The Game -- Episode 3: Long Road Ahead",
+            "platform": "PC",
+            "score": 9.0,
+            "genre": "Adventure",
+            "editors_choice": true,
+            "game_id": 38
+        },
+        {
+            "title": "The Walking Dead: The Game -- Episode 3: Long Road Ahead",
+            "platform": "PlayStation 3",
+            "score": 9.0,
+            "genre": "Adventure",
+            "editors_choice": true,
+            "game_id": 39
         }
-    \]}
+    \]
+}
     * In this case we have option to provide keys \['title', 'platform', 'genre'\]
+    * If we do not provide the request parameters, the api will return all of the games
+
+![Alt text](screenshots/query.png?raw=true "Get Game List")
+
+# Creating dummy data
+* To create dummy data run command,
+```bash
+export username="username"
+export password="password"
+python create_data/create_data.py
+```

@@ -6,7 +6,7 @@ from .models import Game
 class GameSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255)
     platform = serializers.CharField(max_length=255)
-    score = serializers.IntegerField()
+    score = serializers.FloatField()
     genre = serializers.CharField()
     editors_choice = serializers.BooleanField()
     game_id = serializers.IntegerField(required=False)
