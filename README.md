@@ -24,6 +24,7 @@ python manage.py createsuperuser --username username --email username@email.com
 * Create a game by call
     * Method: POST
     * API endpoint: http://127.0.0.1:8000/api/games/
+    * Header: {"Authorization": "token some-token"}
     * Payload: { "game": { "title": "LittleBigPlanet PS Vita", "platform": "PlayStation Vita",
             "score": 9, "genre": "Platformer", "editors_choice": true}}
     * Response: {"success": "Game 'LittleBigPlanet PS Vita' created successfully"}
@@ -33,6 +34,7 @@ python manage.py createsuperuser --username username --email username@email.com
 * Update a game by call
     * Method: PUT
     * API endpoint: http://127.0.0.1:8000/api/games/1
+    * Header: {"Authorization": "token some-token"}
     * Payload: { "editors_choice": false}}
     * Response: {"success": "Game 'LittleBigPlanet PS Vita' updated successfully"}
 
@@ -41,6 +43,7 @@ python manage.py createsuperuser --username username --email username@email.com
 * Get a game by game_id by calling
     * Method: GET
     * API endpoint: http://127.0.0.1:8000/api/games/1
+    * Header: {"Authorization": "token some-token"}
     * Response: {
     "game": {
         "title": "LittleBigPlanet PS Vita",
@@ -56,6 +59,7 @@ python manage.py createsuperuser --username username --email username@email.com
 * Delete a game by call
     * Method: DELETE
     * API endpoint: http://127.0.0.1:8000/api/games/1
+    * Header: {"Authorization": "token some-token"}
     * Response: {"success": "Game 'LittleBigPlanet PS Vita' deleted successfully"}
 
 ![Alt text](screenshots/delete_game.png?raw=true "Delete Game")
@@ -63,6 +67,7 @@ python manage.py createsuperuser --username username --email username@email.com
 * Game a game by query parameters
     * Method: GET
     * API endpoint: http://127.0.0.1:8000/api/games?title=The Walking Dead: The Game -- Episode 3: Long Road Ahead
+    * Header: {"Authorization": "token some-token"}
     * Response: {
     "games": \[
         {
