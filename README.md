@@ -13,6 +13,12 @@ and perform the api calls
 ```bash
 python manage.py createsuperuser --username username --email username@email.com
 ```
+* To run server, run
+```bash
+source game_store_env/bin/activate
+python manage.py runserver
+```
+
 * Now login by using our previously created user. And obtain the token
     * Method: POST
     * API endpoint : http://127.0.0.1:8000/api/login/
